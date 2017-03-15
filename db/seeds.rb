@@ -5,3 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Restaurant.destroy_all
+restaurants_attributes = [
+  {
+    name: "startbucks",
+    address: "back yard",
+    phone_number: "123456789",
+    category: "french"
+  },
+
+  {
+    name: "rick's burgers",
+    address: "4th demention",
+    phone_number: "123456789",
+    category: "italian"
+  },
+
+    {
+    name: "Pizza hut",
+    address: "blank space",
+    phone_number: "123456789",
+    category: "japanese"
+  }
+
+
+]
+
+restaurants_attributes.each { |params| Restaurant.create(params) }
